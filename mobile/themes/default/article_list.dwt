@@ -13,9 +13,7 @@
         <button type="button" disabled="true" class="input-delete J_InputDelete"> <span></span> </button>
       	<button type="submit" ><i class="glyphicon glyphicon-search"></i></button>
       </div>
-      </form>
-
-	
+      </form>	
 	<!--{if $show_asynclist eq 1}-->
 		<div class="article-list-ol">
 		  <ol id="J_ItemList">
