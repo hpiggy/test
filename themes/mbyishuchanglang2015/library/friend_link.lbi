@@ -1,0 +1,19 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!--友情链接 start--> 
+    <!--{if $img_links  or $txt_links }-->
+    <div class="friend-link">
+      <dl class="sncompany ">
+        
+        	<dt><span>友情链接</span> </dt>
+        
+          <dd>
+          <!-- {if $txt_links} --> 
+          <!--开始文字类型的友情链接{foreach from=$txt_links item=link name=bottom}--> 
+          <a  href="{$link.url}" target="_blank" title="{$link.name}">{$link.name}</a> <!-- {if !$smarty.foreach.bottom.last} --><!-- {/if} --> 
+          <!--结束文字类型的友情链接{/foreach}--> 
+          <!-- {/if} --> 
+        	</dd>
+      </dl>
+    </div>
+    <!--{/if}--> 
+    <!--友情链接 end-->

@@ -1,0 +1,47 @@
+<style>
+	body{background:#fa8c35;}
+</style>
+<div class="con" style="background:#fa8c35;">
+  <div class="ect-bg">
+  <header class="ect-header ect-margin-tb ect-margin-lr text-center ect-bg icon-write"> <a href="javascript:history.go(-1)" class="pull-left ect-icon ect-icon1 ect-icon-history"></a> <span>{$title}</span> <a href="javascript:;" onClick="openMune()" class="pull-right ect-icon ect-icon1 ect-icon-mune"></a></header>
+  <nav class="ect-nav ect-nav-list" style="display:none;"><!-- #BeginLibraryItem "/library/page_menu.lbi" --><ul class="ect-diaplay-box text-center">
+  <li class="ect-box-flex"><a href="{:url('index/index')}"><i class="ect-icon ect-icon-home"></i>{$lang.home}</a></li>
+  <li class="ect-box-flex"><a href="{:url('category/top_all')}"><i class="icon-cate"></i>{$lang.category}</a></li>
+  <li class="ect-box-flex"><a href="{:url('user/order_list')}"><i class="ect-icon ect-icon-cate"></i>{$lang.not_pay_list}</a></li>
+  <li class="ect-box-flex"><a href="{:url('flow/cart')}"><i class="ect-icon ect-icon-flow"></i>{$lang.shopping_cart}</a></li>
+  <li class="ect-box-flex"><a href="{:url('user/index')}"><i class="ect-icon ect-icon-user"></i>{$lang.user_center}</a></li>
+</ul>
+<!-- #EndLibraryItem --></nav>
+</div>
+
+	<div class="panel panel-default" style="margin:3em;">
+    	<div class="panel-heading"><h3 class="panel-title">付款信息：</h3></div>
+    	<div class="panel-body">
+        	<p class="ect-margin-tb">{$lang.remember_order_number}：<b class="ect-color">{$order.order_sn}</b></p>
+        <p class="ect-margin-tb"><!--{if $order.shipping_name}-->{$lang.select_shipping}:<b>{$order.shipping_name}</b><!--{/if}--></p>
+        <p class="ect-margin-tb">{$lang.order_amount}: <b>{$total.amount_formated}</b></p>
+        <!--{if $virtual_card}-->
+        <div class="alert alert-warning" role="alert" style="height: 100px;">
+ 	    <!--{foreach from=$virtual_card item=vgoods}-->
+            <h3 style="color:#2359B1; font-size:15px;">{$vgoods.goods_name}</h3>
+            <!--{foreach from=$vgoods.info item=card}-->
+            <ul style="list-style:none;padding:0;margin:0;clear:both">
+              <!--{if $card.card_sn}-->
+              <li> <strong>{$lang.card_sn}:</strong><span style="color:red;">{$card.card_sn}</span> </li>
+              <!--{/if}--> 
+              <!--{if $card.card_password}-->
+              <li> <strong>{$lang.card_password}:</strong><span style="color:red;">{$card.card_password}</span> </li>
+              <!--{/if}--> 
+              <!--{if $card.end_date}-->
+              <li> <strong>{$lang.end_date}:</strong>{$card.end_date} </li>
+              <!--{/if}-->
+            </ul>
+        	<!--{/foreach}--> 
+        <!--{/foreach}--> 
+		</div>
+        <!-- {/if} -->
+       <p class="ect-margin-tb text-center">{$pay_online}</p>
+       <p class="ect-margin-tb text-center">{$order_submit_back}</p>
+        </div>
+    </div>
+</div>

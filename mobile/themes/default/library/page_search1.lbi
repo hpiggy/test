@@ -1,0 +1,13 @@
+<div class="container-fluid category_search">
+	<div class="row" style="margin:0 0;">
+			<div class="col-xs-12" style="padding:0 0;">
+<form action="{:url('category/index')}<!-- {if $id} -->&id={$id}<!-- {/if} -->"  method="post" id="searchForm" name="searchForm">
+      <div class="input-search"> <span>
+        <input name="keywords" type="search" placeholder="{$lang.no_keywords}" id="keywordBox">
+        </span>
+        <button type="submit" value="{$lang.search}" onclick="return check('keywordBox')">搜索</button>
+      </div>
+    </form>
+    </div>
+    </div>
+    </div>

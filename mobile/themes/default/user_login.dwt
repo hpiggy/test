@@ -1,0 +1,52 @@
+<!-- #BeginLibraryItem "/library/user_header.lbi" --><!-- #EndLibraryItem -->
+ <form name="formLogin" action="{:url('user/login')}" method="post" class="validforms">
+ <div class="flow-consignee ect-bg-colorf" style="border:none; margin-top:1em;">
+     <section class="ect-margin-lr">
+      <div class="form-group">
+    		<label>{$lang.username}：</label>	<input placeholder="{$lang.username}/{$lang.mobile}/{$lang.email}" name="username" class="form-control" type="text" id="username" datatype="*" >
+        </div>
+        <div class="form-group">
+    		<label>{$lang.label_password}：</label><input placeholder="{$lang.label_password}"  name="password" type="password" class="form-control" datatype="*6-16" />
+        </div>
+        <!-- 判断是否启用验证码{if $enabled_captcha} -->
+       <div class="form-group">
+          <label>{$lang.comment_captcha}：</label>
+             <input name="captcha" type="text" placeholder="{$lang.comment_captcha}" class="form-control">
+             </span><img src="{:url('Public/captcha', array('rand'=>$this->_var['rand']))}" alt="captcha"class="img-yzm  " style="margin-top:.4em;" onClick="this.src='{:url('public/captcha', array('t'=>'Math.random()'))}'" /></div>
+            </div>
+            <!--{/if}-->
+      </ul>
+    </section>
+  </div>
+  <p class="ect-checkbox ect-padding-tb ect-margin-tb ect-margin-bottom0 ect-padding-lr">
+     <input type="checkbox" value="1" name="remember" id="remember" class="l-checkbox" />
+     <label for="remember">{$lang.remember}<i></i></label>
+      <!-- {if $anonymous_buy eq 1 && $step eq 'flow'} 是否允许未登录用户购物 -->
+      <a href="{:url('flow/consignee',array('direct_shopping'=>1))}" style="float:right;">{$lang.direct_shopping}</a>
+      <!-- {/if} -->
+     
+  </p>
+   <input type="hidden" name="back_act" value="{$back_act}" />
+  <div class="ect-padding-lr ect-padding-tb"> 
+  <input type="submit" class="btn btn-info ect-btn-info ect-dp-info" value="{$lang.now_landing}" />
+  </div>
+  </form>
+  <p class="ect-padding-lr ect-margin-tb text-right ect-margin-bottom0" style="clear:both">
+  <!-- {if $oauth_url} -->
+	<a href="{$oauth_url}">微信授权登录</a> 
+  <!-- {/if} -->
+	<a href="{:url('user/get_password_phone')}">{$lang.forgot_password}</a>  
+	<a href="{:url('user/register')}">{$lang.free_registered}</a>
+  </p>
+  <div class="ect-padding-lr ect-margin-tb user-hezuo">
+  	{$lang.third_login}
+  	<p>
+    	<a href="{:url('user/third_login',array('type'=>'qq'))}"><img src="__TPL__/images/qq.png"></a>
+        <a href="{:url('user/third_login',array('type'=>'sina'))}"><img src="__TPL__/images/weibo.png"></a>
+    </p>
+  </div>
+  </div>
+<!-- #BeginLibraryItem "/library/search.lbi" --><!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>

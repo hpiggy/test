@@ -1,0 +1,453 @@
+执行日期：20141219092842
+11111
+执行日期：20141219092842
+array (
+  'service' => 'alipay.wap.trade.create.direct',
+  'format' => 'xml',
+  'v' => '2.0',
+  'partner' => '2088011125312949',
+  'req_id' => '2014121989732174',
+  'sec_id' => 'MD5',
+  'req_data' => '<direct_trade_create_req><subject>2014121989732</subject><out_trade_no>2014121989732O174</out_trade_no><total_fee>0.01</total_fee><seller_account_name>pay@ecmoban.com</seller_account_name><call_back_url>http://demo.ectouch.cn/source/mobile/respond.php?code=f1bbtpsAErdaY3IZg8hrpfJPgEIglhtvz0fb0meQfL0Hlaa5HagZI7Cq2kaYTKq6pIa5Z8ElBNj6BhZda+fIF6kNNmgK6DRlv8puDO6nDL80+PlJbmis6HIu</call_back_url><notify_url>http://demo.ectouch.cn/source/mobile/respond.php?code=f848xZt2G/I4Ngu6OlLY0zezvAF3eFzYlDcvyDUtAbDQXUh4HLGIn1VXgSnivzH7F8qMnfC233/mM/YIcqL7GZeIOvTcKFJHiltCAmhEl390cqe1VeWSng</notify_url><out_user>胡适</out_user><merchant_url>http://demo.ectouch.cn/source/mobile</merchant_url><pay_expire>3600</pay_expire></direct_trade_create_req>',
+  '_input_charset' => 'utf-8',
+)
+执行日期：20141219095851
+11111
+执行日期：20141219095851
+array (
+  'service' => 'alipay.wap.trade.create.direct',
+  'format' => 'xml',
+  'v' => '2.0',
+  'partner' => '2088011125312949',
+  'req_id' => '2014121989732174',
+  'sec_id' => 'MD5',
+  'req_data' => '<direct_trade_create_req><subject>2014121989732</subject><out_trade_no>2014121989732O174</out_trade_no><total_fee>0.01</total_fee><seller_account_name>pay@ecmoban.com</seller_account_name><call_back_url>http://demo.ectouch.cn/source/mobile/respond.php?code=e439c+Xi/qBSENW1SeRq5YGc2AxF1SrtXWUKWs9jDl0zvcFSumZtypqmq5eeUPsiVlXebdj50w+ev3QCh/BXNirIWRZ7bzaxVa9pBT0CKNt6TVSdr/P9XTUQ</call_back_url><notify_url>http://demo.ectouch.cn/source/mobile/respond.php?code=0e88zqfivSqCgwo4QfxmyhQaQK1nhc0tVynYuq2sHftd0lvvkmuExaKJigOxBhNZrDzF5TTuZT5BgDdnAZUCShzpkFCF958DMNS3lbUp/Iab9GVoqbQGNw</notify_url><out_user>胡适</out_user><merchant_url>http://demo.ectouch.cn/source/mobile</merchant_url><pay_expire>3600</pay_expire></direct_trade_create_req>',
+  '_input_charset' => 'utf-8',
+)
+执行日期：20141219100150
+11111
+执行日期：20141219100150
+array (
+  'service' => 'alipay.wap.trade.create.direct',
+  'format' => 'xml',
+  'v' => '2.0',
+  'partner' => '2088011125312949',
+  'req_id' => '2014121989732174',
+  'sec_id' => 'MD5',
+  'req_data' => '<direct_trade_create_req><subject>2014121989732</subject><out_trade_no>2014121989732O174</out_trade_no><total_fee>0.01</total_fee><seller_account_name>pay@ecmoban.com</seller_account_name><call_back_url>http://demo.ectouch.cn/source/mobile/respond.php?code=aa8emUP/Fr9QJzRs6+y+GrWEQn7IbPqe1BDhg0ASmyKm8AG6aWFMl6finZeVJRYO9Rv7x4Ga0/xTUHPzD+MxPipjrUW5d+UTJ1vblbnLXjN59zGnjrzm02tC</call_back_url><notify_url>http://demo.ectouch.cn/source/mobile/respond.php?code=e2ed0hndv1UnsaRdXmLMeebMlfT8ldldSXnScjEevVhhse4YwHutjct7sl/1zpkn2Q6X1ef4fOT9gXqXWA7qCPOjNfZN7WPE73JQAkBRAVP4wdFHoVjg3Q</notify_url><out_user>胡适</out_user><merchant_url>http://demo.ectouch.cn/source/mobile</merchant_url><pay_expire>3600</pay_expire></direct_trade_create_req>',
+  '_input_charset' => 'utf-8',
+)
+执行日期：20141219100435
+22222
+执行日期：20141219100435
+array (
+  'code' => 'aa8emUP/Fr9QJzRs6 y GrWEQn7IbPqe1BDhg0ASmyKm8AG6aWFMl6finZeVJRYO9Rv7x4Ga0/xTUHPzD MxPipjrUW5d UTJ1vblbnLXjN59zGnjrzm02tC',
+  'out_trade_no' => '2014121989732O174',
+  'request_token' => 'requestToken',
+  'result' => 'success',
+  'trade_no' => '2014121940374204',
+  'sign' => '6370cfa47040a68ba6d7ec30bbe8af29',
+  'sign_type' => 'MD5',
+)
+执行日期：20141219100435
+33333
+执行日期：20141219100435
+array (
+)
+执行日期：20141219100620
+22222
+执行日期：20141219100620
+array (
+)
+执行日期：20141219100620
+33333
+执行日期：20141219100620
+array (
+  'code' => 'e2ed0hndv1UnsaRdXmLMeebMlfT8ldldSXnScjEevVhhse4YwHutjct7sl/1zpkn2Q6X1ef4fOT9gXqXWA7qCPOjNfZN7WPE73JQAkBRAVP4wdFHoVjg3Q',
+  'service' => 'alipay.wap.trade.create.direct',
+  'sign' => '42977183c04993a98bfdceb3fc959bd7',
+  'sec_id' => 'MD5',
+  'v' => '1.0',
+  'notify_data' => '<notify><payment_type>1</payment_type><subject>2014121989732</subject><trade_no>2014121940374204</trade_no><buyer_email>lanker@vip.qq.com</buyer_email><gmt_create>2014-12-19 10:02:37</gmt_create><notify_type>trade_status_sync</notify_type><quantity>1</quantity><out_trade_no>2014121989732O174</out_trade_no><notify_time>2014-12-19 10:06:19</notify_time><seller_id>2088011125312949</seller_id><trade_status>TRADE_FINISHED</trade_status><is_total_fee_adjust>N</is_total_fee_adjust><total_fee>0.01</total_fee><gmt_payment>2014-12-19 10:02:42</gmt_payment><seller_email>pay@ecmoban.com</seller_email><gmt_close>2014-12-19 10:02:42</gmt_close><price>0.01</price><buyer_id>2088002523398042</buyer_id><notify_id>d5ebe4127d957826ab79b351d8b2b82128</notify_id><use_coupon>N</use_coupon></notify>',
+)
+执行日期：20141219101310
+11111
+执行日期：20141219101310
+array (
+  'service' => 'alipay.wap.trade.create.direct',
+  'format' => 'xml',
+  'v' => '2.0',
+  'partner' => '2088011125312949',
+  'req_id' => '2014121955859175',
+  'sec_id' => 'MD5',
+  'req_data' => '<direct_trade_create_req><subject>2014121955859</subject><out_trade_no>2014121955859O175</out_trade_no><total_fee>0.01</total_fee><seller_account_name>pay@ecmoban.com</seller_account_name><call_back_url>http://demo.ectouch.cn/source/mobile/respond.php?code=YToyOntzOjQ6InR5cGUiO3M6ODoiY2FsbGJhY2siO3M6NDoiY29kZSI7czoxMDoiYWxpcGF5X3dhcCI7fQ</call_back_url><notify_url>http://demo.ectouch.cn/source/mobile/respond.php?code=YToyOntzOjQ6InR5cGUiO3M6Njoibm90aWZ5IjtzOjQ6ImNvZGUiO3M6MTA6ImFsaXBheV93YXAiO30</notify_url><out_user>胡适</out_user><merchant_url>http://demo.ectouch.cn/source/mobile</merchant_url><pay_expire>3600</pay_expire></direct_trade_create_req>',
+  '_input_charset' => 'utf-8',
+)
+执行日期：20141219101419
+22222
+执行日期：20141219101419
+array (
+)
+执行日期：20141219101419
+33333
+执行日期：20141219101419
+array (
+  'code' => 'YToyOntzOjQ6InR5cGUiO3M6Njoibm90aWZ5IjtzOjQ6ImNvZGUiO3M6MTA6ImFsaXBheV93YXAiO30',
+  'service' => 'alipay.wap.trade.create.direct',
+  'sign' => '48c84909d6a7c42003028e5f456dbd6e',
+  'sec_id' => 'MD5',
+  'v' => '1.0',
+  'notify_data' => '<notify><payment_type>1</payment_type><subject>2014121955859</subject><trade_no>2014121940391604</trade_no><buyer_email>lanker@vip.qq.com</buyer_email><gmt_create>2014-12-19 10:13:15</gmt_create><notify_type>trade_status_sync</notify_type><quantity>1</quantity><out_trade_no>2014121955859O175</out_trade_no><notify_time>2014-12-19 10:14:19</notify_time><seller_id>2088011125312949</seller_id><trade_status>TRADE_FINISHED</trade_status><is_total_fee_adjust>N</is_total_fee_adjust><total_fee>0.01</total_fee><gmt_payment>2014-12-19 10:14:18</gmt_payment><seller_email>pay@ecmoban.com</seller_email><gmt_close>2014-12-19 10:14:18</gmt_close><price>0.01</price><buyer_id>2088002523398042</buyer_id><notify_id>afb8bdf318115720ff5375d51b1669fe28</notify_id><use_coupon>N</use_coupon></notify>',
+)
+执行日期：20141219101435
+22222
+执行日期：20141219101435
+array (
+  'code' => 'YToyOntzOjQ6InR5cGUiO3M6ODoiY2FsbGJhY2siO3M6NDoiY29kZSI7czoxMDoiYWxpcGF5X3dhcCI7fQ',
+  'out_trade_no' => '2014121955859O175',
+  'request_token' => 'requestToken',
+  'result' => 'success',
+  'trade_no' => '2014121940391604',
+  'sign' => '6406319aab7244744b6783cc870fdde9',
+  'sign_type' => 'MD5',
+)
+执行日期：20141219101435
+33333
+执行日期：20141219101435
+array (
+)
+执行日期：20141219101601
+22222
+执行日期：20141219101601
+array (
+)
+执行日期：20141219101601
+33333
+执行日期：20141219101601
+array (
+  'code' => 'e2ed0hndv1UnsaRdXmLMeebMlfT8ldldSXnScjEevVhhse4YwHutjct7sl/1zpkn2Q6X1ef4fOT9gXqXWA7qCPOjNfZN7WPE73JQAkBRAVP4wdFHoVjg3Q',
+  'service' => 'alipay.wap.trade.create.direct',
+  'sign' => '20e042a5ce072677060ca8db4cbcc3f1',
+  'sec_id' => 'MD5',
+  'v' => '1.0',
+  'notify_data' => '<notify><payment_type>1</payment_type><subject>2014121989732</subject><trade_no>2014121940374204</trade_no><buyer_email>lanker@vip.qq.com</buyer_email><gmt_create>2014-12-19 10:02:37</gmt_create><notify_type>trade_status_sync</notify_type><quantity>1</quantity><out_trade_no>2014121989732O174</out_trade_no><notify_time>2014-12-19 10:16:01</notify_time><seller_id>2088011125312949</seller_id><trade_status>TRADE_FINISHED</trade_status><is_total_fee_adjust>N</is_total_fee_adjust><total_fee>0.01</total_fee><gmt_payment>2014-12-19 10:02:42</gmt_payment><seller_email>pay@ecmoban.com</seller_email><gmt_close>2014-12-19 10:02:42</gmt_close><price>0.01</price><buyer_id>2088002523398042</buyer_id><notify_id>d5ebe4127d957826ab79b351d8b2b82128</notify_id><use_coupon>N</use_coupon></notify>',
+)
+执行日期：20141219101851
+22222
+执行日期：20141219101851
+array (
+)
+执行日期：20141219101851
+33333
+执行日期：20141219101851
+array (
+  'code' => 'YToyOntzOjQ6InR5cGUiO3M6Njoibm90aWZ5IjtzOjQ6ImNvZGUiO3M6MTA6ImFsaXBheV93YXAiO30',
+  'service' => 'alipay.wap.trade.create.direct',
+  'sign' => '144a5939b3caf0263c8ddd9d09df27c7',
+  'sec_id' => 'MD5',
+  'v' => '1.0',
+  'notify_data' => '<notify><payment_type>1</payment_type><subject>2014121955859</subject><trade_no>2014121940391604</trade_no><buyer_email>lanker@vip.qq.com</buyer_email><gmt_create>2014-12-19 10:13:15</gmt_create><notify_type>trade_status_sync</notify_type><quantity>1</quantity><out_trade_no>2014121955859O175</out_trade_no><notify_time>2014-12-19 10:18:51</notify_time><seller_id>2088011125312949</seller_id><trade_status>TRADE_FINISHED</trade_status><is_total_fee_adjust>N</is_total_fee_adjust><total_fee>0.01</total_fee><gmt_payment>2014-12-19 10:14:18</gmt_payment><seller_email>pay@ecmoban.com</seller_email><gmt_close>2014-12-19 10:14:18</gmt_close><price>0.01</price><buyer_id>2088002523398042</buyer_id><notify_id>afb8bdf318115720ff5375d51b1669fe28</notify_id><use_coupon>N</use_coupon></notify>',
+)
+执行日期：20141219102219
+11111
+执行日期：20141219102219
+array (
+  'service' => 'alipay.wap.trade.create.direct',
+  'format' => 'xml',
+  'v' => '2.0',
+  'partner' => '2088011125312949',
+  'req_id' => '2014121930551176',
+  'sec_id' => 'MD5',
+  'req_data' => '<direct_trade_create_req><subject>2014121930551</subject><out_trade_no>2014121930551O176</out_trade_no><total_fee>0.01</total_fee><seller_account_name>pay@ecmoban.com</seller_account_name><call_back_url>http://demo.ectouch.cn/source/mobile/respond.php?code=YToyOntzOjQ6InR5cGUiO3M6ODoiY2FsbGJhY2siO3M6NDoiY29kZSI7czoxMDoiYWxpcGF5X3dhcCI7fQ</call_back_url><notify_url>http://demo.ectouch.cn/source/mobile/respond.php?code=YToyOntzOjQ6InR5cGUiO3M6Njoibm90aWZ5IjtzOjQ6ImNvZGUiO3M6MTA6ImFsaXBheV93YXAiO30</notify_url><out_user>kek</out_user><merchant_url>http://demo.ectouch.cn/source/mobile</merchant_url><pay_expire>3600</pay_expire></direct_trade_create_req>',
+  '_input_charset' => 'utf-8',
+)
+执行日期：20141219102238
+11111
+执行日期：20141219102238
+array (
+  'service' => 'alipay.wap.trade.create.direct',
+  'format' => 'xml',
+  'v' => '2.0',
+  'partner' => '2088011125312949',
+  'req_id' => '2014121930551176',
+  'sec_id' => 'MD5',
+  'req_data' => '<direct_trade_create_req><subject>2014121930551</subject><out_trade_no>2014121930551O176</out_trade_no><total_fee>0.01</total_fee><seller_account_name>pay@ecmoban.com</seller_account_name><call_back_url>http://demo.ectouch.cn/source/mobile/respond.php?code=YToyOntzOjQ6InR5cGUiO3M6ODoiY2FsbGJhY2siO3M6NDoiY29kZSI7czoxMDoiYWxpcGF5X3dhcCI7fQ</call_back_url><notify_url>http://demo.ectouch.cn/source/mobile/respond.php?code=YToyOntzOjQ6InR5cGUiO3M6Njoibm90aWZ5IjtzOjQ6ImNvZGUiO3M6MTA6ImFsaXBheV93YXAiO30</notify_url><out_user>kek</out_user><merchant_url>http://demo.ectouch.cn/source/mobile</merchant_url><pay_expire>3600</pay_expire></direct_trade_create_req>',
+  '_input_charset' => 'utf-8',
+)
+执行日期：20150319133733
+array (
+  'ToUserName' => 'gh_0db17abccc2e',
+  'FromUserName' => 'oxX5NuBx6_MP6REuwChMDTGRGu9o',
+  'CreateTime' => '1426743453',
+  'MsgType' => 'event',
+  'Event' => 'subscribe',
+  'EventKey' => 
+  SimpleXMLElement::__set_state(array(
+  )),
+)
+执行日期：20150319134532
+array (
+  'ToUserName' => 'gh_0db17abccc2e',
+  'FromUserName' => 'oxX5NuGndvitgfuPevCD5JXGnW4s',
+  'CreateTime' => '1426743932',
+  'MsgType' => 'event',
+  'Event' => 'subscribe',
+  'EventKey' => 
+  SimpleXMLElement::__set_state(array(
+  )),
+)
+执行日期：20150320094842
+array (
+  'ToUserName' => 'gh_0db17abccc2e',
+  'FromUserName' => 'oxX5NuGndvitgfuPevCD5JXGnW4s',
+  'CreateTime' => '1426816121',
+  'MsgType' => 'text',
+  'Content' => '你好',
+  'MsgId' => '6128128577304792455',
+)
+执行日期：20150320094903
+array (
+  'ToUserName' => 'gh_0db17abccc2e',
+  'FromUserName' => 'oxX5NuGndvitgfuPevCD5JXGnW4s',
+  'CreateTime' => '1426816143',
+  'MsgType' => 'text',
+  'Content' => 'hot',
+  'MsgId' => '6128128671794072976',
+)
+执行日期：20150320095044
+array (
+  'ToUserName' => 'gh_0db17abccc2e',
+  'FromUserName' => 'oxX5NuGndvitgfuPevCD5JXGnW4s',
+  'CreateTime' => '1426816244',
+  'MsgType' => 'text',
+  'Content' => 'bd',
+  'MsgId' => '6128129105585769921',
+)
+执行日期：20150320095312
+array (
+  'ToUserName' => 'gh_0db17abccc2e',
+  'FromUserName' => 'oxX5NuGndvitgfuPevCD5JXGnW4s',
+  'CreateTime' => '1426816392',
+  'MsgType' => 'event',
+  'Event' => 'unsubscribe',
+  'EventKey' => 
+  SimpleXMLElement::__set_state(array(
+  )),
+)
+执行日期：20150320095333
+array (
+  'ToUserName' => 'gh_0db17abccc2e',
+  'FromUserName' => 'oxX5NuGndvitgfuPevCD5JXGnW4s',
+  'CreateTime' => '1426816413',
+  'MsgType' => 'event',
+  'Event' => 'subscribe',
+  'EventKey' => 
+  SimpleXMLElement::__set_state(array(
+  )),
+)
+执行日期：20150320103141
+array (
+  'ToUserName' => 'gh_0db17abccc2e',
+  'FromUserName' => 'oxX5NuGndvitgfuPevCD5JXGnW4s',
+  'CreateTime' => '1426818701',
+  'MsgType' => 'event',
+  'Event' => 'unsubscribe',
+  'EventKey' => 
+  SimpleXMLElement::__set_state(array(
+  )),
+)
+执行日期：20150320103628
+array (
+  'ToUserName' => 'gh_0db17abccc2e',
+  'FromUserName' => 'oxX5NuGndvitgfuPevCD5JXGnW4s',
+  'CreateTime' => '1426818987',
+  'MsgType' => 'event',
+  'Event' => 'subscribe',
+  'EventKey' => 
+  SimpleXMLElement::__set_state(array(
+  )),
+)
+执行日期：20150320103641
+array (
+  'ToUserName' => 'gh_0db17abccc2e',
+  'FromUserName' => 'oxX5NuGndvitgfuPevCD5JXGnW4s',
+  'CreateTime' => '1426819001',
+  'MsgType' => 'event',
+  'Event' => 'CLICK',
+  'EventKey' => 'sign',
+)
+执行日期：20150320103645
+array (
+  'ToUserName' => 'gh_0db17abccc2e',
+  'FromUserName' => 'oxX5NuGndvitgfuPevCD5JXGnW4s',
+  'CreateTime' => '1426819005',
+  'MsgType' => 'event',
+  'Event' => 'CLICK',
+  'EventKey' => 'jfcx',
+)
+执行日期：20150320103650
+array (
+  'ToUserName' => 'gh_0db17abccc2e',
+  'FromUserName' => 'oxX5NuGndvitgfuPevCD5JXGnW4s',
+  'CreateTime' => '1426819010',
+  'MsgType' => 'event',
+  'Event' => 'CLICK',
+  'EventKey' => 'shop',
+)
+执行日期：20150320103724
+array (
+  'ToUserName' => 'gh_0db17abccc2e',
+  'FromUserName' => 'oxX5NuGndvitgfuPevCD5JXGnW4s',
+  'CreateTime' => '1426819043',
+  'MsgType' => 'event',
+  'Event' => 'unsubscribe',
+  'EventKey' => 
+  SimpleXMLElement::__set_state(array(
+  )),
+)
+执行日期：20150320103824
+array (
+  'ToUserName' => 'gh_0db17abccc2e',
+  'FromUserName' => 'oxX5NuGndvitgfuPevCD5JXGnW4s',
+  'CreateTime' => '1426819104',
+  'MsgType' => 'event',
+  'Event' => 'subscribe',
+  'EventKey' => 
+  SimpleXMLElement::__set_state(array(
+  )),
+)
+执行日期：20150320103940
+array (
+  'ToUserName' => 'gh_0db17abccc2e',
+  'FromUserName' => 'oxX5NuGndvitgfuPevCD5JXGnW4s',
+  'CreateTime' => '1426819180',
+  'MsgType' => 'event',
+  'Event' => 'CLICK',
+  'EventKey' => 'sign',
+)
+执行日期：20150320104038
+array (
+  'ToUserName' => 'gh_0db17abccc2e',
+  'FromUserName' => 'oxX5NuGndvitgfuPevCD5JXGnW4s',
+  'CreateTime' => '1426819238',
+  'MsgType' => 'event',
+  'Event' => 'CLICK',
+  'EventKey' => 'bd',
+)
+执行日期：20150320104128
+array (
+  'ToUserName' => 'gh_0db17abccc2e',
+  'FromUserName' => 'oxX5NuGndvitgfuPevCD5JXGnW4s',
+  'CreateTime' => '1426819288',
+  'MsgType' => 'event',
+  'Event' => 'CLICK',
+  'EventKey' => 'jfcx',
+)
+执行日期：20150320104153
+array (
+  'ToUserName' => 'gh_0db17abccc2e',
+  'FromUserName' => 'oxX5NuGndvitgfuPevCD5JXGnW4s',
+  'CreateTime' => '1426819313',
+  'MsgType' => 'event',
+  'Event' => 'CLICK',
+  'EventKey' => 'ddcx',
+)
+执行日期：20150320104310
+array (
+  'ToUserName' => 'gh_0db17abccc2e',
+  'FromUserName' => 'oxX5NuGndvitgfuPevCD5JXGnW4s',
+  'CreateTime' => '1426819390',
+  'MsgType' => 'event',
+  'Event' => 'CLICK',
+  'EventKey' => 'hot',
+)
+执行日期：20150320105034
+array (
+  'ToUserName' => 'gh_0db17abccc2e',
+  'FromUserName' => 'oxX5NuGndvitgfuPevCD5JXGnW4s',
+  'CreateTime' => '1426819833',
+  'MsgType' => 'text',
+  'Content' => 'zjd',
+  'MsgId' => '6128144520223397265',
+)
+执行日期：20150320105430
+array (
+  'ToUserName' => 'gh_0db17abccc2e',
+  'FromUserName' => 'oxX5NuGndvitgfuPevCD5JXGnW4s',
+  'CreateTime' => '1426820070',
+  'MsgType' => 'text',
+  'Content' => 'zjd',
+  'MsgId' => '6128145538130646585',
+)
+执行日期：20150320105532
+array (
+  'ToUserName' => 'gh_0db17abccc2e',
+  'FromUserName' => 'oxX5NuGndvitgfuPevCD5JXGnW4s',
+  'CreateTime' => '1426820132',
+  'MsgType' => 'event',
+  'Event' => 'CLICK',
+  'EventKey' => 'news',
+)
+执行日期：20150320105549
+array (
+  'ToUserName' => 'gh_0db17abccc2e',
+  'FromUserName' => 'oxX5NuGndvitgfuPevCD5JXGnW4s',
+  'CreateTime' => '1426820149',
+  'MsgType' => 'event',
+  'Event' => 'CLICK',
+  'EventKey' => 'shop',
+)
+执行日期：20150320105557
+array (
+  'ToUserName' => 'gh_0db17abccc2e',
+  'FromUserName' => 'oxX5NuGndvitgfuPevCD5JXGnW4s',
+  'CreateTime' => '1426820156',
+  'MsgType' => 'event',
+  'Event' => 'CLICK',
+  'EventKey' => 'jfcx',
+)
+执行日期：20150320105600
+array (
+  'ToUserName' => 'gh_0db17abccc2e',
+  'FromUserName' => 'oxX5NuGndvitgfuPevCD5JXGnW4s',
+  'CreateTime' => '1426820160',
+  'MsgType' => 'event',
+  'Event' => 'CLICK',
+  'EventKey' => 'sign',
+)
+执行日期：20150320105604
+array (
+  'ToUserName' => 'gh_0db17abccc2e',
+  'FromUserName' => 'oxX5NuGndvitgfuPevCD5JXGnW4s',
+  'CreateTime' => '1426820163',
+  'MsgType' => 'event',
+  'Event' => 'CLICK',
+  'EventKey' => 'sign',
+)
+执行日期：20150320105608
+array (
+  'ToUserName' => 'gh_0db17abccc2e',
+  'FromUserName' => 'oxX5NuGndvitgfuPevCD5JXGnW4s',
+  'CreateTime' => '1426820167',
+  'MsgType' => 'event',
+  'Event' => 'CLICK',
+  'EventKey' => 'hot',
+)
+执行日期：20150320105841
+array (
+  'ToUserName' => 'gh_0db17abccc2e',
+  'FromUserName' => 'oxX5NuGndvitgfuPevCD5JXGnW4s',
+  'CreateTime' => '1426820321',
+  'MsgType' => 'event',
+  'Event' => 'CLICK',
+  'EventKey' => 'shop',
+)
+执行日期：20150320110118
+array (
+  'ToUserName' => 'gh_0db17abccc2e',
+  'FromUserName' => 'oxX5NuGndvitgfuPevCD5JXGnW4s',
+  'CreateTime' => '1426820477',
+  'MsgType' => 'event',
+  'Event' => 'CLICK',
+  'EventKey' => 'ddcx',
+)

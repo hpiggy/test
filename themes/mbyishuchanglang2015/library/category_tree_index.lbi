@@ -1,0 +1,58 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script type="text/javascript">
+          //初始化主菜单
+            function sw_nav2(obj,tag)
+            {
+            var DisSub2 = document.getElementById("DisSub2_"+obj);
+            var HandleLI2= document.getElementById("HandleLI2_"+obj);
+                if(tag==1)
+                {
+                    DisSub2.style.display = "block";
+					HandleLI2.className="current";
+                }
+                else
+                {
+                    DisSub2.style.display = "none";
+					HandleLI2.className="";
+                }
+            }
+</script>
+ 
+    
+    
+<div id="category_tree">
+    <dl class="clearfix" style=" margin-top:-419px; *height:407px;" >
+    	<!--{foreach from=$categories item=cat name=no}-->
+        <div  class="dt"  {if $smarty.foreach.no.iteration eq 9}style="border-bottom:none;"{/if}  onMouseOver="sw_nav2({$smarty.foreach.no.iteration},1);" onMouseOut="sw_nav2({$smarty.foreach.no.iteration},0);" >
+        	<div id="HandleLI2_{$smarty.foreach.no.iteration}">
+                <a  class="a<!--{if $smarty.foreach.no.index mod 2 eq 0}--><!-- {else} --> t <!-- {/if} --> "href="{$cat.url}">{$cat.name|escape:html}</a>
+                <p class="clearfix cart2">
+                  <!--{foreach from=$cat.cat_id item=child name=no2}--> 
+                  <!-- {if $smarty.foreach.no2.iteration<4}-->
+                  <a target="_blank" class="track" href="{$child.url}">{$child.name|escape:html}</a>
+                  <!-- {/if} --> 
+                  <!--{/foreach}--> 
+                  </p>
+                
+    		</div>
+        	<dd  id=DisSub2_{$smarty.foreach.no.iteration} style="display:none;"> 
+            	<i class="gude"><img src="../images/allListArrow.png"/></i>
+                <div class="new_pub_nav_pop ">
+                      <ul class="left left_01">
+                        <!--{foreach from=$cat.cat_id item=child name=foo2}-->
+                        <li class="fore{$smarty.foreach.foo2.iteration} clearfix">
+                          <h4><a href="{$child.url}">{$child.name|escape:html}</a></h4>
+                          <div class="e"> 
+                            <!--{foreach from=$child.cat_id item=childer}--> <a href="{$childer.url}">{$childer.name|escape:html}</a><!--{/foreach}--> 
+                          </div>
+                        </li>
+                        <!--{/foreach}-->
+                        
+                      </ul>
+                    </div>
+    		</dd> 
+    	</div>
+    	<!--{/foreach}--> 
+    </dl>
+</div>
+

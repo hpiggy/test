@@ -1,0 +1,55 @@
+<!-- #BeginLibraryItem "/library/user_header.lbi" --><!-- #EndLibraryItem --> 
+<script type="text/javascript">
+	  {foreach from=$lang.profile_js item=item key=key}
+		var {$key} = "{$item}";
+	  {/foreach}
+	</script>
+<form name="formEdit" action="{:url('user/profile')}" method="post" onSubmit="return userEdit()" style="margin-top:1em;">
+    <table class="table table-striped">
+      <tr>
+        <td><label>{$lang.email}：</label></td>
+        <td><div class="form-group">
+          <input name="email" class="form-control" type="text" placeholder="{$lang.no_emaill}"  value="{$profile.email}">
+         </div></td>
+      </tr>
+      {foreach from=$extend_info_list item=field} 
+      <!-- {if $field.id eq 6} -->
+       <tr>
+       <td><label>{$lang.sel_question}：</label></td>
+       <td>
+        <div class="form-group">
+          <select name="sel_question" class="form-control">
+            {html_options options=$passwd_questions selected=$profile.passwd_question}
+          
+          </select>
+</div>
+        </td>
+      </tr>
+      <tr>
+        <td><label>{$lang.passwd_answer}:</label></td>
+          <td>
+          <div class="form-group">
+         	 <input placeholder="{$lang.passwd_answer}" class="form-control" name="passwd_answer" type="text" value="{$profile.passwd_answer}" />
+          </div>
+          </td>
+			
+      </tr>
+      <!-- {else} -->
+      <tr>
+        <td><label>{$field.reg_field_name}:</label></td>
+        <td>
+        	<div class="form-group">
+          <input name="extend_field{$field.id}" type="text" class="form-control" value="{$field.content}" placeholder="{$field.reg_field_name}">
+          </div></td>
+      </tr>
+      <!-- {/if} --> 
+      {/foreach}
+    </table>
+  <input name="act" type="hidden" value="profile" />
+  <div class="two-btn ect-padding-tb ect-padding-lr ect-margin-tb text-center">
+    <input name="submit" type="submit" value="{$lang.confirm_edit}" class="btn btn-info ect-dp-info" />
+  </div>
+</form>
+</div>
+<!-- #BeginLibraryItem "/library/search.lbi" --><!-- #EndLibraryItem --> <!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body></html>

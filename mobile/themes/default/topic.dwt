@@ -1,0 +1,126 @@
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+{if $auto_redirect}
+<meta http-equiv="refresh" content="3;URL={$message.back_url}" />
+{/if}
+<title>{$page_title} 触屏版</title>
+<link rel="stylesheet" href="library/__PUBLIC__/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="library/__PUBLIC__/bootstrap/css/font-awesome.min.css">
+<link rel="stylesheet" href="{$ectouch_css_path}">
+<link rel="stylesheet" href="library/__TPL__/css/photoswipe.css">
+<link rel="stylesheet" href="library/__TPL__/css/ect_dp.css">
+</head><body><!-- #EndLibraryItem --><div class="con">
+  <div class="ect-bg">
+    <header class="ect-header ect-margin-tb ect-margin-lr text-center icon-write ect-bg"> <a href="javascript:history.go(-1)" class="pull-left ect-icon ect-icon1 ect-icon-history"></a> <span>{$tile}</span> <a href="javascript:;"  onClick="openMune()" class="pull-right ect-icon ect-icon1 ect-icon-mune icon-write"></a></header>
+    <nav class="ect-nav ect-nav-list" style="display:none;"><!-- #BeginLibraryItem "/library/page_menu.lbi" --><ul class="ect-diaplay-box text-center">
+  <li class="ect-box-flex"><a href="{:url('index/index')}"><i class="ect-icon ect-icon-home"></i>{$lang.home}</a></li>
+  <li class="ect-box-flex"><a href="{:url('category/top_all')}"><i class="icon-cate"></i>{$lang.category}</a></li>
+  <li class="ect-box-flex"><a href="{:url('user/order_list')}"><i class="ect-icon ect-icon-cate"></i>{$lang.not_pay_list}</a></li>
+  <li class="ect-box-flex"><a href="{:url('flow/cart')}"><i class="ect-icon ect-icon-flow"></i>{$lang.shopping_cart}</a></li>
+  <li class="ect-box-flex"><a href="{:url('user/index')}"><i class="ect-icon ect-icon-user"></i>{$lang.user_center}</a></li>
+</ul>
+<!-- #EndLibraryItem --></nav>
+  </div>
+  <!--{if $topic.htmls eq ''} 图片类型不为图片或者flash-->
+  <script language="javascript">
+	var img_url      = "{$topic.topic_img}";
+	
+	if (img_url.indexOf('.swf') != -1)
+	{
+		document.write('<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="'+ topic_width +'" height="'+ topic_height +'">');
+		document.write('<param name="movie" value="'+ img_url +'"><param name="quality" value="high">');
+		document.write('<param name="menu" value="false"><param name=wmode value="opaque">');
+		document.write('<embed src="'+ img_url +'" wmode="opaque" menu="false" quality="high" width="'+ topic_width +'" height="'+ topic_height +'" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" wmode="transparent"/>');
+		document.write('</object>');
+	}
+	else
+	{
+		document.write('<img border="0" src="' + img_url + '">');
+	}
+  </script>
+  <!--{else}-->
+  {$topic.htmls}
+  <!--{/if}-->
+  
+  <!--{if $topic.intro neq ''}-->
+  {$topic.intro}
+ <br /><br />
+  <!--{/if}--><!-- #BeginLibraryItem "/library/goods_list_topic.lbi" --><!--{if $show_asynclist eq 1}-->
+<div class="ect-margin-tb ect-pro-list ect-margin-bottom0 ect-border-bottom0">
+  <ul id="J_ItemList">
+    <li class="single_item"></li>
+    <a href="javascript:;" class="get_more"></a>
+  </ul>
+</div>
+<!--{else}-->
+<style>
+.clearfix{height: 3em;line-height: 3em; background-color: #fff; text-align:center;}
+.clearfix h3{ line-height:2em; margin-left:10px;}
+</style>
+<!-- {foreach from=$sort_goods_arr item=sort key=sort_name} -->
+<div class="clearfix">
+  <h3><span>{$sort_name}</span></h3>
+</div>
+<div class="ect-margin-tb ect-pro-list ect-margin-bottom0 ect-border-bottom0">
+  <ul id="J_ItemList">
+    <!--{foreach name=goods_list from=$sort item=goods}-->
+    <li class="single_item"> <a href="{$goods.url}"><img src="{$goods.goods_thumb}" alt="{$goods.name}"></a>
+      <dl>
+        <dt>
+          <h4 class="title"><a href="{$goods.url}">{$goods.short_style_name}</a></h4>
+        </dt>
+        <dd><span class="pull-left"><strong>{$lang.price}：<b class="ect-colory"><!--{if $goods.promote_price}-->{$goods.promote_price}<!--{else}-->{$goods.shop_price}<!--{/if}--></b></strong><small class="ect-margin-lr"><del>{$goods.market_price}</del></small></span><span class="ect-pro-price"> 
+          <!--{if $goods.promotion} --> 
+          <!-- {foreach from=$goods.promotion item=promotion} --> 
+          <!--{if $promotion.type == 'group_buy'}--><i class="label tuan">{$lang.group_buy_act}</i> 
+          <!--{elseif $promotion.act_type == 0}--> <i class="label mz"> {$lang.favourable_mz}</i> 
+          <!--{elseif $promotion.act_type == 1}--> <i class="label mj"> {$lang.favourable_mj}</i> 
+          <!--{elseif $promotion.act_type == 2}--> <i class="label zk"> {$lang.favourable_zk}</i> 
+          <!--{/if}--> 
+          <!--{/foreach}--> 
+          <!--{/if}--> 
+          </span></dd>
+        <dd><span class="pull-left {if $goods.mysc!= 0}ect-colory{/if}"><i class="fa {if $goods.mysc!= 0}fa-heart{else}fa-heart-o{/if}"></i> {$goods.sc}{$lang.like_num}</span><span class="pull-right">{$lang.sort_sales}：{$goods.sales_count}{$lang.piece}</span> </dd>
+      </dl>
+    </li>
+    <!--{/foreach}-->
+  </ul>
+</div>
+<!--{/foreach}--> 
+<!--{/if} -->
+<footer class="logo"><a href="http://www.ectouch.cn" title="ECTouch官网" target="_blank"><img src="library/__TPL__/images/copyright.png" width="176" height="60"></a></footer>
+<!-- #EndLibraryItem --></div><!-- #BeginLibraryItem "/library/search.lbi" --><div class="search" style="display:none;">
+  <div class="ect-bg">
+    <header class="ect-header ect-margin-tb ect-margin-lr text-center"><span>{$lang.search}</span><a href="javascript:;" onClick="closeSearch();"><i class="icon-close pull-right"></i></a></header>
+  </div>
+  <div class="ect-padding-lr" style=" margin-top:1em;">
+     <form action="{:url('category/index')}<!-- {if $id} -->&id={$id}<!-- {/if} -->"  method="post" id="searchForm" name="searchForm">
+      <div class="input-search"> <span>
+        <input name="keywords" type="search" placeholder="{$lang.no_keywords}" id="keywordBox" style="border:1px #e3e3e3 solid;">
+        </span>
+        <button type="submit" value="{$lang.search}" onclick="return check('keywordBox')"><i class="glyphicon glyphicon-search"></i></button>
+      </div>
+    </form>
+    <!-- {if $hot_search_keywords} -->
+    <div class="hot-search">
+      <p>
+      <h4 class="title"><b>{$lang.hot_search}：</b></h4>
+      </p>
+      <!-- {foreach from=$hot_search_keywords item=ky} --> 
+      <a href="{:url('category/index', array('keywords'=>$this->_var[ky]))}<!-- {if $id} -->&id={$id}<!-- {/if} -->">{$ky}</a> 
+      <!-- {/foreach} --> 
+    </div>
+    <!-- {/if} --> 
+  </div>
+</div>
+<!-- #EndLibraryItem --><script type="text/javascript">
+if( {$show_asynclist} == 1){
+ 	get_asynclist('{:url('topic/asynclist', array('id'=>$this->_var['id'], 'brand'=>$this->_var['brand_id'], 'price_min'=>$this->_var['price_min'], 'price_max'=>$this->_var['price_max'], 'filter_attr'=>$this->_var['filter_attr'], 'page'=>$this->_var['page'], 'sort'=>$this->_var['sort'], 'order'=>$this->_var['order'], 'keywords'=>$this->_var['keywords']))}' , '__TPL__/images/loader.gif');
+ }
+</script>
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body></html>

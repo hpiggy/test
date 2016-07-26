@@ -1,0 +1,52 @@
+<!-- #BeginLibraryItem "/library/user_header.lbi" --><!-- #EndLibraryItem -->
+<script type="text/javascript">
+{foreach from=$lang.profile_js item=item key=key}
+  var {$key} = "{$item}";
+{/foreach}
+</script>
+  <form name="formPassword" action="{:url('user/add_booking')}" method="post" onsubmit="return addBooking();">
+   <table class="table table-striped">
+      <tr>
+        <td><label>{$lang.booking_goods_name}：</label></td>
+                <td>{$goods.goods_name}</td>
+          </tr>
+          <tr>
+        <td><label>{$lang.booking_amount}：</label></td>
+			<td><input name="number" class="form-control" type="text" value="{$goods.goods_number}" /></td>
+          </tr>
+
+          <tr>
+        <td><label>{$lang.describe}：</label></td>
+        <td>
+              
+              <textarea name="desc"  class="form-control" wrap="virtual" >{$goods_attr}{$goods.goods_desc|escape}</textarea>
+            </td>
+          </tr>
+          <tr>
+        <td><label>{$lang.contact_username}：</label></td>
+              <td><input name="linkman" type="text" class="form-control"  value="{$goods.consignee|escape}" /></td>
+          </tr>  <tr>
+        <td><label>{$lang.email_address}：</label></td>
+        <td>
+              <input name="email" type="text" class="form-control" value="{$goods.email|escape}" />
+          </td>
+            </tr>
+            <tr>
+        <td><label>{$lang.contact_phone}：</label></td>
+        <td>
+              <input name="tel" type="text"  class="form-control"value="{$goods.tel|escape}" />
+          </td></tr></table>
+   <div class="two-btn ect-padding-tb ect-padding-lr ect-margin-tb text-center">
+       <input name="id" type="hidden" value="{$goods.id}" />
+       <input name="rec_id" type="hidden" value="{$goods.rec_id}" />
+       <input name="submit" type="submit" class="btn btn-info ect-dp-info" value="{$lang.submit_booking_goods}" />
+   </div>
+   </form>
+</div>
+
+
+</div>
+<!-- #BeginLibraryItem "/library/search.lbi" --><!-- #EndLibraryItem -->
+<!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem -->
+</body>
+</html>

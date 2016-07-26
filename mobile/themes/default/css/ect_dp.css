@@ -1,0 +1,112 @@
+body{background:#fff;}
+a{color:#428bca !important}
+
+.container{max-width:100%;}
+.goods-info ul.comment-radio li{border-right:none; margin-right:1em;}
+.ect-radio label i, .ect-checkbox label i{border:1px solid #bbb}
+.ect-radio input:checked+label i, .ect-checkbox input:checked+label i{background: url(../images/radio.png) center center #b3a99f  no-repeat;
+background-size: 80%;}
+.icon-cate{background:url(../images/idx_mune.png) no-repeat; background-size:cover;}
+.btn-dp-info{color: #fff;
+background-color: #5bc0de;
+border-color: #46b8da;padding: 6px 12px; font-size:14px;}
+/*header*/
+.ect-m-header{max-width:640px; overflow:hidden; margin-bottom:0; background:#f4f4f4;}
+
+.index-three .pull-left{width:50%;}
+.index-three .pull-left img{width:100%; height:auto;}
+/*首页快速导航*/
+.ect-row-nav li{padding:0; border:none;}
+.ect-row-nav li i{height:auto}
+.ect-m-row-nav{border-bottom:none;}
+.ect-m-row-nav li{width:25%; border-right:2px solid #e3e3e3; border-bottom:2px solid #e3e3e3; padding:2em 0;}
+.ect-m-row-nav li p{color:#333}
+
+/*首页图片列表*/
+.ect-dp-inbanner li{margin:0.1em;}
+.ect-dp-inbanner img{width:100%; height:auto}
+
+/*菜单导航*/
+nav.ect-nav{background:#f6f5f1}
+/*ect-dp-container*/
+.ect-dp-container{margin-top:10px;}
+.ect-dp-container .panel-default{margin-top:5px;}
+.ect-dp-container .panel-heading{
+background-color: #f5f5f5;
+border-color: #ddd;color:#808080;text-decoration: none;}
+
+/*category_top_all*/
+.category-list div{margin-top:0.5em;}
+.category-list a{color:#b3a99f; font-size:.9em;}
+.category-list h5{border-bottom:1px dashed #808080;line-height:30px;}
+.category-list h5 a{color:#808080; font-size:1em;}
+.category-list div{font-size:1.3em}
+.ect-dp-container .font-default{color: #b3a99f; font-size:0.8em;}
+/*category_search*/
+.category_search{background-color:#E0DFDB;margin-bottom:5px;padding:10px 10px;}
+.input-search{margin-top:0; height:3rem;}
+.input-search span input{margin-top:0; font-size:1.2rem; height:3rem; line-height:3rem;}
+.input-search button{font-size:1.2rem; height:3rem; line-height:3rem; width:4.6rem;}
+.input-search button i{margin-top:0.2em;}
+/*category*/
+.ect-wrapper{top:8.1em;}
+.breadcrumb{margin:0.6em 0;}
+.breadcrumb .glyphicon{font-size:0.8em;}
+.breadcrumb a{color:#777; padding:0 0.4em;}
+
+.ect-pro-list{border:none;}
+.ect-pro-list ul li{border-radius:4px; margin-bottom:1em; border:none;}
+.ect-pro-list .single_item:nth-child(odd) {
+background-color: #efefef;
+}
+.ect-pro-list .single_item:nth-child(even) {
+background-color: #f7f7f7;
+}
+
+/*背景*/
+.con{background:#fff;}
+.ect-bg{background:#b3a99f !important;}
+.focus .hd ul .on{background:#b3a99f !important;}
+.ect-colory{color:red !important;}
+.ect-border-top{border-top:#b3a99f 2px solid;}
+
+#scrollUp  i{color:#fff !important;}
+
+/**/
+.ect-nav a{color:#b3a99f !important;}
+.pager li>a, .pager li>span{color:#888 !important}
+
+/*goods*/
+.goods-option-con label{background:#999; border:none; color:#fff; border-radius:4px;}
+.goods-option-conr input:checked+label{border:none;background:#d9534f; color:#fff;}
+.goods-option-con input:checked+label:before{content:"";}
+
+.goods-num{margin-top:0.8em;}
+.goods-num .form-group{margin-bottom:0.1em;}
+
+.goods-more-a{border: 1px solid #e3e3e3; border-radius:6px; margin-bottom:1em; margin:0.6em}
+.goods-more-a a:first-child{border-top:none;}
+
+.btn-dp-buy{margin-top:0.5em; margin-bottom:1em;}
+.btn-dp-buy a{background:#d9534f; color:#fff !important; padding:0.5em 0.7em; border-radius:6px;}
+
+.goods-related{border:none;}
+
+.goods-promotion{margin-top:0;}
+.goods-promotion a{ color:#333 !important}
+.goods-promotion i{ font-style:normal;}
+.goods-promotion a{display:block; width:100%; }
+
+/*订单确认*/
+.checkout_section{border: 1px solid #dedede;
+-webkit-border-radius: 5px 5px 5px 5px;
+-moz-border-radius: 5px 5px 5px 5px;
+-o-border-radius: 5px 5px 5px 5px;
+border-radius: 5px 5px 5px 5px;
+padding: 5px 10px;}
+.flow-checkout>form>section{border: 1px solid #e3e3e3; border-radius:6px; overflow:hidden;}
+.flow-checkout>form>section a{color:#666 !important;}
+.flow-checkout>form>section a.ect-colorf{color:#fff !important;}
+.checkout-pro-list ul li dt a{color: #4094d3 !important;}
+
+

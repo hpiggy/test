@@ -1,0 +1,200 @@
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+{if $auto_redirect}
+<meta http-equiv="refresh" content="3;URL={$message.back_url}" />
+{/if}
+<title>{$page_title} 触屏版</title>
+<link rel="stylesheet" href="library/__PUBLIC__/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="library/__PUBLIC__/bootstrap/css/font-awesome.min.css">
+<link rel="stylesheet" href="{$ectouch_css_path}">
+<link rel="stylesheet" href="library/__TPL__/css/photoswipe.css">
+<link rel="stylesheet" href="library/__TPL__/css/ect_dp.css">
+</head><body><!-- #EndLibraryItem --><div class="con">
+  <div class="ect-bg">
+    <header class="ect-header ect-margin-tb ect-margin-lr text-center icon-write ect-bg"> <a href="javascript:history.go(-1)" class="pull-left ect-icon ect-icon1 ect-icon-history"></a> <span>{$title}</span> <a href="javascript:;"  onClick="openMune()" class="pull-right ect-icon ect-icon1 ect-icon-mune icon-write"></a></header>
+    <nav class="ect-nav ect-nav-list" style="display:none;"><!-- #BeginLibraryItem "/library/page_menu.lbi" --><ul class="ect-diaplay-box text-center">
+  <li class="ect-box-flex"><a href="{:url('index/index')}"><i class="ect-icon ect-icon-home"></i>{$lang.home}</a></li>
+  <li class="ect-box-flex"><a href="{:url('category/top_all')}"><i class="icon-cate"></i>{$lang.category}</a></li>
+  <li class="ect-box-flex"><a href="{:url('user/order_list')}"><i class="ect-icon ect-icon-cate"></i>{$lang.not_pay_list}</a></li>
+  <li class="ect-box-flex"><a href="{:url('flow/cart')}"><i class="ect-icon ect-icon-flow"></i>{$lang.shopping_cart}</a></li>
+  <li class="ect-box-flex"><a href="{:url('user/index')}"><i class="ect-icon ect-icon-user"></i>{$lang.user_center}</a></li>
+</ul>
+<!-- #EndLibraryItem --></nav>
+  </div>
+  <!--商品图片相册-->
+  <div id="focus" class="focus goods-focus ect-padding-lr ect-margin-tb">
+    <div class="hd">
+      <ul>
+      </ul>
+    </div>
+    <div class="bd">
+      <ul id="Gallery">
+        <li><a href="{$auction_goods.goods_img}"><img src="{$auction_goods.goods_img}" alt="{$auction_goods.goods_name}" /></a></li>
+        <!--{if $pictures}--> 
+        <!-- {foreach from=$pictures item=picture name=no}--> 
+        <!-- {if $smarty.foreach.no.iteration > 1}  -->
+        <li><a href="{$picture.img_url}"><img src="{$picture.img_url}" alt="{$picture.img_desc}" /></a></li>
+        <!-- {/if}--> 
+        <!--{/foreach}--> 
+        <!--{/if}-->
+      </ul>
+    </div>
+  </div>
+  <!--商品属性介绍-->
+  <div class="goods-info ect-padding-tb"> 
+    <!--商品描述-->
+    <section class="ect-margin-tb ect-margin-lr goods-title">
+      <h4 class="title pull-left">{$auction_goods.goods_name}{if $auction.product_id > 0}&nbsp;[{$products_info}]{/if}</h4>
+      <span class="pull-right text-center  ect-padding-lr"> {$lang.btn_collect} </span> </section>
+    <section class="ect-margin-tb ect-margin-lr "> {$lang.au_current_price}：{$auction.formated_current_price} <br/>
+      起止时间：{$auction.start_time} -- {$auction.end_time}<br>
+      {$lang.au_start_price}：{$auction.formated_start_price}<br>
+      {$lang.au_amplitude}：{$auction.formated_amplitude}<br>
+      <!-- {if $auction.end_price gt 0} --> 
+      {$lang.au_end_price}：{$auction.formated_end_price}<br>
+      <!-- {/if} --> 
+      <!-- {if $auction.deposit gt 0} --> 
+      {$lang.au_deposit}：{$auction.formated_deposit}<br>
+      <!-- {/if} -->
+      </p>
+    </section>
+    <!-- {if $auction.status_no eq 0} 未开始 --> 
+    {$lang.au_pre_start} 
+    <!-- {elseif $auction.status_no eq 1} 进行中 -->
+    <section class="ect-margin-tb ect-margin-bottom0 ect-padding-tb goods-promotion ect-padding-lr ">
+      <h5><b>{$lang.au_under_way}</b></h5>
+      <h5><span id="leftTime">{$lang.please_waiting}</span></h5>
+    </section>
+    <form name="theForm" action="{:url('auction/bid')}" method="post">
+      <section class="ect-padding-lr ect-padding-tb goods-option">
+        <div class="goods-num"> <span class="pull-left">{$lang.au_i_want_bid}：</span>
+          <div class="input-group pull-left wrap">
+            <input type="text" class="form-contro form-num"  name="price"  id="price"/>
+          </div>
+          <input name="bid" type="submit" class="bnt_sub" id="bid" value="{$lang.button_bid}" style="vertical-align:middle;" />
+          <input name="id" type="hidden" value="{$auction.act_id}" />
+        </div>
+      </section>
+    </form>
+    <!-- {else} 已结束 -->
+    <form name="theForm" action="{:url('auction/buy')}" method="post">
+      <!-- {if $auction.is_winner} --> 
+      <span class="f_red">{$lang.au_is_winner}</span><br />
+      <input name="buy" type="submit" class="bnt_sub" value="{$lang.button_buy}" />
+      <input name="id" type="hidden" value="{$auction.act_id}" />
+      <!-- {else} --> 
+      {$lang.au_finished} 
+      <!-- {/if} -->
+    </form>
+    <!-- {/if} -->
+    <section class="goods-more-a"> <a class="ect-padding-lr ect-padding-tb" href="{:url('Auction/record' , array('id' => $this->_var['auction']['act_id']))}"><span class="Text">{$lang.activity_intro}</span> <i class="pull-right fa fa-chevron-right"></i></a> <a class="ect-padding-lr ect-padding-tb" href="{:url('Auction/record' , array('id' => $this->_var['auction']['act_id']))}"><span class="Text">{$lang.bid_record}</span> <i class="pull-right fa fa-chevron-right"></i></a> </section>
+  </div>
+  <div class="goods-related ect-padding-lr ect-padding-tb"> {$auction.act_desc|escape:html|nl2br} </div>
+  <footer class="logo"><a href="http://www.ectouch.cn" title="ECTouch官网" target="_blank"><img src="__TPL__/images/copyright.png" width="176" height="60"></a></footer>
+</div><!-- #BeginLibraryItem "/library/search.lbi" --><div class="search" style="display:none;">
+  <div class="ect-bg">
+    <header class="ect-header ect-margin-tb ect-margin-lr text-center"><span>{$lang.search}</span><a href="javascript:;" onClick="closeSearch();"><i class="icon-close pull-right"></i></a></header>
+  </div>
+  <div class="ect-padding-lr" style=" margin-top:1em;">
+     <form action="{:url('category/index')}<!-- {if $id} -->&id={$id}<!-- {/if} -->"  method="post" id="searchForm" name="searchForm">
+      <div class="input-search"> <span>
+        <input name="keywords" type="search" placeholder="{$lang.no_keywords}" id="keywordBox" style="border:1px #e3e3e3 solid;">
+        </span>
+        <button type="submit" value="{$lang.search}" onclick="return check('keywordBox')"><i class="glyphicon glyphicon-search"></i></button>
+      </div>
+    </form>
+    <!-- {if $hot_search_keywords} -->
+    <div class="hot-search">
+      <p>
+      <h4 class="title"><b>{$lang.hot_search}：</b></h4>
+      </p>
+      <!-- {foreach from=$hot_search_keywords item=ky} --> 
+      <a href="{:url('category/index', array('keywords'=>$this->_var[ky]))}<!-- {if $id} -->&id={$id}<!-- {/if} -->">{$ky}</a> 
+      <!-- {/foreach} --> 
+    </div>
+    <!-- {/if} --> 
+  </div>
+</div>
+<!-- #EndLibraryItem --><!-- #BeginLibraryItem "/library/page_footer.lbi" --><a id="scrollUp" href="#top" style="position: fixed; z-index: 10;"><i class="fa fa-angle-up"></i></a>
+<style>
+#scrollUp {
+	border-radius:100%;
+	background-color: #777;
+	color: #eee;
+	font-size: 40px;
+	line-height: 1;text-align: center;text-decoration: none;bottom: 1em;right: 10px;overflow: hidden;width: 46px;
+	height: 46px;
+	border: none;
+	opacity: 0.6;
+}
+</style>
+<script type="text/javascript" src="library/__PUBLIC__/js/jquery.min.js" ></script> 
+<script type="text/javascript" src="library/__PUBLIC__/js/jquery.json.js" ></script> 
+<script type="text/javascript" src="library/__PUBLIC__/js/common.js"></script> 
+<script type="text/javascript" src="library/__PUBLIC__/js/jquery.more.js"></script> 
+<script type="text/javascript" src="library/__PUBLIC__/js/utils.js" ></script> 
+<script src="library/__TPL__/js/TouchSlide.1.1.js"></script> 
+<script src="library/__TPL__/js/ectouch.js"></script> 
+<script src="library/__TPL__/js/simple-inheritance.min.js"></script> 
+<script src="library/__TPL__/js/code-photoswipe-1.0.11.min.js"></script> 
+<script src="library/__PUBLIC__/bootstrap/js/bootstrap.min.js"></script> 
+<script src="library/__TPL__/js/jquery.scrollUp.min.js"></script> 
+<script type="text/javascript" src="library/__PUBLIC__/js/validform.js" ></script> 
+<script language="javascript">
+	/*banner滚动图片*/
+		TouchSlide({
+			slideCell : "#focus",
+			titCell : ".hd ul", // 开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
+			mainCell : ".bd ul",
+			effect : "left",
+			autoPlay : true, // 自动播放
+			autoPage : true, // 自动分页
+			delayTime: 200, // 毫秒；切换效果持续时间（执行一次效果用多少毫秒）
+			interTime: 2500, // 毫秒；自动运行间隔（隔多少毫秒后执行下一个效果）
+			switchLoad : "_src" // 切换加载，真实图片路径为"_src"
+		});
+	/*弹出评论层并隐藏其他层*/
+	function openSearch(){
+		if($(".con").is(":visible")){
+			$(".con").hide();	
+			$(".search").show();
+		}
+	}
+	function closeSearch(){
+		if($(".con").is(":hidden")){
+			$(".con").show();	
+			$(".search").hide();
+		}
+	}
+</script> 
+<!-- #EndLibraryItem --><script type="text/javascript" src="__TPL__/js/lefttime.js"></script> 
+<script type="text/javascript">
+TouchSlide({ 
+	slideCell:"#picScroll",
+	titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
+	autoPage:"true", //自动分页
+	pnLoop:"false", // 前后按钮不循环
+	switchLoad:"_src" //切换加载，真实图片路径为"_src" 
+});
+</script> 
+<script type="text/javascript">
+var gmt_end_time = "{$auction.gmt_end_time|default:0}";
+{foreach from=$lang.goods_js item=item key=key}
+var {$key} = "{$item}";
+var now_time = {$now_time};
+{/foreach}
+onload = function()
+{
+  try
+  {
+    onload_leftTime(now_time);
+  }
+  catch (e)
+  {}
+}
+</script>
+</body></html>

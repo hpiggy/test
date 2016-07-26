@@ -1,0 +1,109 @@
+<!-- #BeginLibraryItem "/library/user_header.lbi" --><!-- #EndLibraryItem -->
+<div class="user-info">
+  <div class="user-img pull-left"><i class="glyphicon glyphicon-user"></i></div>
+  <dl class="pull-left">
+    <dt>
+      <h4>{$info.username}</h4>
+    </dt>
+    <dd>{$rank_name}</dd>
+    <dd>{$info.integral}</dd>
+  </dl>
+  <span class="pull-right"><a href="{:url('user/msg_list')}" class="ect-colorf">{$sys_notice}&nbsp;<i class="fa fa-envelope-o <!-- {if $new_msg} -->fa-envelope-o-sl<!-- {/if} -->"></i></a></span></div>
+<section class="ect-margin-tb " style="max-width:640px; margin-top:1em;">
+  <ul class="row list-group public_section ect-margin-tb ect-margin-lr">
+    <a href="{:url('user/not_pay_order_list')}" class="list-group-item href_info">
+    {$lang.not_pay_list}<i class="pull-right fa fa-angle-right"></i>
+    </a> <a href="{:url('user/order_list')}" class="list-group-item href_info">
+  {$lang.order_list_lnk}<i class="pull-right fa fa-angle-right"></i>
+    </a> <a href="{:url('user/address_list')}" class="list-group-item href_info">
+    {$lang.label_address}<i class="pull-right fa fa-angle-right"></i>
+    </a> <a href="{:url('user/account_detail')}" class="list-group-item href_info">
+    {$lang.label_user_surplus}<i class="pull-right fa fa-angle-right"></i>
+    </a> <a href="{:url('user/profile')}" class="list-group-item href_info">
+    {$lang.user_center}<i class="pull-right fa fa-angle-right"></i>
+    </a>
+    <a href="{:url('user/edit_password')}" class="list-group-item href_info">
+    {$lang.edit_password}<i class="pull-right fa fa-angle-right"></i>
+    </a> <a href="{:url('user/service')}" class="list-group-item href_info">
+   {$lang.user_service}<i class="pull-right fa fa-angle-right"></i>
+    </a> <a href="{:url('user/share')}" class="list-group-item href_info">
+    {$lang.label_share}<i class="pull-right fa fa-angle-right"></i>
+    </a>
+     <a href="{:url('user/tag_list')}" class="list-group-item href_info">
+{$lang.label_tag}<i class="pull-right fa fa-angle-right"></i>
+    </a>
+    <a href="{:url('user/bonus')}" class="list-group-item href_info">
+ {$lang.label_bonus}<i class="pull-right fa fa-angle-right"></i>
+    </a>
+     <a href="{:url('user/booking_list')}" class="list-group-item href_info">
+     {$lang.label_booking}<i class="pull-right fa fa-angle-right"></i>
+    </a>
+    <a href="{:url('collection_list')}" class="list-group-item href_info">
+     {$lang.label_collection}<i class="pull-right fa fa-angle-right"></i>
+    </a>
+    <a href="{:url('comment_list')}" class="list-group-item href_info">
+     {$lang.label_comment}<i class="pull-right fa fa-angle-right"></i>
+    </a>
+  </ul>
+  <div class="ect-padding-lr">
+  	<a href="{:url('user/logout')}" class="btn btn-danger btn-block ect-colorf">{$lang.label_logout}</a>
+  </div>
+</section>
+<section class="user-tab ect-margin-tb ect-margin-bottom0  ect-margin-lr" style="overflow:hidden;"> 
+
+  <p class="ect-margin-tb ect-padding-lr"><b>{$lang.user_history}</b></p>
+  
+  <div class="tab-pane ect-pro-list" > 
+      <!--{if $history}--> 
+      <span class="pull-right ect-padding-lr ect-margin-tb ect-margin-bottom0">
+      <a href="{:url('user/clear_history')}" class="history_clear del"><i class="glyphicon glyphicon-trash"></i> {$lang.clear_history}</a></span>
+      <ul class="ect-margin-lr">
+        <!-- {foreach from=$history item=val} -->
+        <li style="border-right:none; border-bottom:1px solid #e3e3e3;"><a href="{:url('goods/index', array('id'=>$this->_var[val]['goods_id']))}"><img src="{$val.goods_thumb}"></a>
+          <dl>
+            <dt>
+              <h4 class="title"><a href="{:url('goods/index', array('id'=>$this->_var[val]['goods_id']))}">{$val.goods_name}</a></h4>
+            </dt>
+            <dd class="dd-price"><span class="pull-left"><strong>{$lang.sort_price}：<b class="ect-colory">{$val.shop_price}</b></strong><small class="ect-margin-lr"><del>{$val.market_price}</del></small></span></dd>
+          </dl>
+        </li>
+        <!-- {/foreach} -->
+      </ul>
+      <!--{else}-->
+      <p class="text-center  ect-margin-tb ect-padding-tb">{$lang.not_history}<a href="{:url('category/index')}" class="ect-color ect-margin-lr" style="font-size:1.3em;">{$lang.enter}</a>{$lang.scan_goods}</p>
+      <!--{/if}--> 
+    </div>
+</section>
+</div>
+<!-- #BeginLibraryItem "/library/search.lbi" --><!-- #EndLibraryItem --> <!-- #BeginLibraryItem "/library/page_footer.lbi" --><!-- #EndLibraryItem --> 
+<script type="text/javascript">
+    $(function(){
+        $(".del").click(function(){
+            if(!confirm('您确定要删除吗？')){
+                return false;
+            }
+            var obj = $(this);
+            var url = obj.attr("href");
+            $.get(url, '', function(data){
+                if(1 == data.status){
+                    if(obj.hasClass("history_clear")){
+                        obj.closest(".ect-pro-list").html("<p class='text-center  ect-margin-tb ect-padding-tb'>暂无浏览记录，点击<a href={:url('category/index')} class='ect-color ect-margin-lr' style='font-size:1.3em;'>进入</a>浏览商品</p>");
+                        obj.parent().siblings("ul").remove();
+                    } 
+                    else{
+                        if(obj.closest("li").siblings("li").length == 0){
+                            obj.closest("ul").html("<p class='text-center  ect-margin-tb ect-padding-tb'>{$lang.no_data}</p>");
+                        }
+                        obj.closest("li").remove();
+                    }
+                }
+                else{
+                    alert("删除失败");
+                }
+            }, 'json');
+            return false;
+   		});
+    })
+</script> 
+</body>
+</html>

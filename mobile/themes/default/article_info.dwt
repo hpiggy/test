@@ -1,0 +1,77 @@
+<!-- #BeginLibraryItem "/library/page_header.lbi" --><!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+{if $auto_redirect}
+<meta http-equiv="refresh" content="3;URL={$message.back_url}" />
+{/if}
+<title>{$page_title} 触屏版</title>
+<link rel="stylesheet" href="library/__PUBLIC__/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="library/__PUBLIC__/bootstrap/css/font-awesome.min.css">
+<link rel="stylesheet" href="{$ectouch_css_path}">
+<link rel="stylesheet" href="library/__TPL__/css/photoswipe.css">
+<link rel="stylesheet" href="library/__TPL__/css/ect_dp.css">
+</head><body><!-- #EndLibraryItem --><div class="con">
+  <div class="ect-bg">
+    <header class="ect-header ect-margin-tb ect-margin-lr text-center icon-write article"><a class="ect-icon ect-icon-home pull-left" href="index.php"></a><span>{$lang.shophelp}</span><a class="ect-icon ect-icon-cate pull-right" href="{:url('article/index')}"></a></header>
+  </div>
+  <div class="article-info">
+    <h3>{$article.title}</h3>
+    <div class="article-info-con"> {$article.content} </div>
+  </div>
+</div>
+</html><!-- #BeginLibraryItem "/library/page_footer.lbi" --><a id="scrollUp" href="#top" style="position: fixed; z-index: 10;"><i class="fa fa-angle-up"></i></a>
+<style>
+#scrollUp {
+	border-radius:100%;
+	background-color: #777;
+	color: #eee;
+	font-size: 40px;
+	line-height: 1;text-align: center;text-decoration: none;bottom: 1em;right: 10px;overflow: hidden;width: 46px;
+	height: 46px;
+	border: none;
+	opacity: 0.6;
+}
+</style>
+<script type="text/javascript" src="library/__PUBLIC__/js/jquery.min.js" ></script> 
+<script type="text/javascript" src="library/__PUBLIC__/js/jquery.json.js" ></script> 
+<script type="text/javascript" src="library/__PUBLIC__/js/common.js"></script> 
+<script type="text/javascript" src="library/__PUBLIC__/js/jquery.more.js"></script> 
+<script type="text/javascript" src="library/__PUBLIC__/js/utils.js" ></script> 
+<script src="library/__TPL__/js/TouchSlide.1.1.js"></script> 
+<script src="library/__TPL__/js/ectouch.js"></script> 
+<script src="library/__TPL__/js/simple-inheritance.min.js"></script> 
+<script src="library/__TPL__/js/code-photoswipe-1.0.11.min.js"></script> 
+<script src="library/__PUBLIC__/bootstrap/js/bootstrap.min.js"></script> 
+<script src="library/__TPL__/js/jquery.scrollUp.min.js"></script> 
+<script type="text/javascript" src="library/__PUBLIC__/js/validform.js" ></script> 
+<script language="javascript">
+	/*banner滚动图片*/
+		TouchSlide({
+			slideCell : "#focus",
+			titCell : ".hd ul", // 开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
+			mainCell : ".bd ul",
+			effect : "left",
+			autoPlay : true, // 自动播放
+			autoPage : true, // 自动分页
+			delayTime: 200, // 毫秒；切换效果持续时间（执行一次效果用多少毫秒）
+			interTime: 2500, // 毫秒；自动运行间隔（隔多少毫秒后执行下一个效果）
+			switchLoad : "_src" // 切换加载，真实图片路径为"_src"
+		});
+	/*弹出评论层并隐藏其他层*/
+	function openSearch(){
+		if($(".con").is(":visible")){
+			$(".con").hide();	
+			$(".search").show();
+		}
+	}
+	function closeSearch(){
+		if($(".con").is(":hidden")){
+			$(".con").show();	
+			$(".search").hide();
+		}
+	}
+</script> 
+<!-- #EndLibraryItem --></body></html>
