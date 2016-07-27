@@ -65,13 +65,9 @@ if ($_REQUEST['act'] == 'add')
 {
     /* 权限检查 */
     admin_priv('cat_manage');
-
-
-
     /* 模板赋值 */
     $smarty->assign('ur_here',      $_LANG['04_category_add']);
     $smarty->assign('action_link',  array('href' => 'category.php?act=list', 'text' => $_LANG['03_category_list']));
-
     $smarty->assign('goods_type_list',  goods_type_list(0)); // 取得商品类型
     $smarty->assign('attr_list',        get_attr_list()); // 取得商品属性
 
