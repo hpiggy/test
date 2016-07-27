@@ -105,6 +105,7 @@ elseif ($_REQUEST['act'] == 'query')
 /*------------------------------------------------------ */
 elseif ($_REQUEST['act'] == 'add')
 {
+    
     /* 检查权限 */
     admin_priv('account_manage');
     /* 检查参数 */
