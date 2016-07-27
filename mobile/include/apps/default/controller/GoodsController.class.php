@@ -138,8 +138,10 @@ class GoodsController extends CommonController {
      * 商品信息 
      */
     public function info() {
+        $type=$_REQUEST ['type'];
         /* 获得商品的信息 */
         $goods = model('Goods')->get_goods_info($this->goods_id);
+        $this->assign('type', $type);
         $this->assign('goods', $goods);
         $properties = model('Goods')->get_goods_properties($this->goods_id);  // 获得商品的规格和属性
         $this->assign('properties', $properties['pro']);                      // 商品属性

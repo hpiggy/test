@@ -1,4 +1,4 @@
-<?php exit;?>a:3:{s:8:"template";a:6:{i:0;s:63:"D:\phpStudy\WWW\dapu\mobile/themes/default/category_top_all.dwt";i:1;s:66:"D:\phpStudy\WWW\dapu\mobile/themes/default/library/page_header.lbi";i:2;s:63:"D:\phpStudy\WWW\dapu\mobile/themes/default/library/page_top.lbi";i:3;s:67:"D:\phpStudy\WWW\dapu\mobile/themes/default/library/page_search1.lbi";i:4;s:64:"D:\phpStudy\WWW\dapu\mobile/themes/default/library/page_menu.lbi";i:5;s:66:"D:\phpStudy\WWW\dapu\mobile/themes/default/library/page_footer.lbi";}s:7:"expires";i:1469523446;s:8:"maketime";i:1469519846;}<!DOCTYPE html>
+<?php exit;?>a:3:{s:8:"template";a:6:{i:0;s:63:"D:\phpStudy\WWW\dapu\mobile/themes/default/category_top_all.dwt";i:1;s:66:"D:\phpStudy\WWW\dapu\mobile/themes/default/library/page_header.lbi";i:2;s:63:"D:\phpStudy\WWW\dapu\mobile/themes/default/library/page_top.lbi";i:3;s:67:"D:\phpStudy\WWW\dapu\mobile/themes/default/library/page_search1.lbi";i:4;s:64:"D:\phpStudy\WWW\dapu\mobile/themes/default/library/page_menu.lbi";i:5;s:66:"D:\phpStudy\WWW\dapu\mobile/themes/default/library/page_footer.lbi";}s:7:"expires";i:1469589606;s:8:"maketime";i:1469586006;}<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
 <meta charset="utf-8">
@@ -33,12 +33,12 @@
     </div>
     </div>
     </div><div class="container ect-dp-container">
-  <div class="panel-group" id="accordion"> 
+  <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true"> 
         <div class="panel panel-default"> 
-            <div class="panel-heading">
-        <h4 class="panel-title" data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="false" aria-controls="collapse1"> 手机类型<i class="pull-right fa fa-angle-right"></i> </h4>
+            <div class="panel-heading" role="tab" id="heading1">
+        <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="false" aria-controls="collapse1" style="display:block;color: rgb(128, 128, 128) !important;">手机类型 <i class="pull-right fa fa-angle-right"></i></a></h4>
       </div>
-      <div id="collapse1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+      <div id="collapse1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading1">
         <div class="panel-body"> 
                     <div class="ect-margin-tb category-list">
             <h5> 
@@ -86,10 +86,10 @@
        
     </div>
         <div class="panel panel-default"> 
-            <div class="panel-heading">
-        <h4 class="panel-title" data-toggle="collapse" data-parent="#accordion" href="#collapse6" aria-expanded="false" aria-controls="collapse6"> 手机配件<i class="pull-right fa fa-angle-right"></i> </h4>
+            <div class="panel-heading" role="tab" id="heading6">
+        <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse6" aria-expanded="false" aria-controls="collapse6" style="display:block;color: rgb(128, 128, 128) !important;">手机配件 <i class="pull-right fa fa-angle-right"></i></a></h4>
       </div>
-      <div id="collapse6" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+      <div id="collapse6" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading6">
         <div class="panel-body"> 
                     <div class="ect-margin-tb category-list">
             <h5> 
@@ -137,10 +137,10 @@
        
     </div>
         <div class="panel panel-default"> 
-            <div class="panel-heading">
-        <h4 class="panel-title" data-toggle="collapse" data-parent="#accordion" href="#collapse12" aria-expanded="false" aria-controls="collapse12"> 充值卡<i class="pull-right fa fa-angle-right"></i> </h4>
+            <div class="panel-heading" role="tab" id="heading12">
+        <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse12" aria-expanded="false" aria-controls="collapse12" style="display:block;color: rgb(128, 128, 128) !important;">充值卡 <i class="pull-right fa fa-angle-right"></i></a></h4>
       </div>
-      <div id="collapse12" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+      <div id="collapse12" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading12">
         <div class="panel-body"> 
                     <div class="ect-margin-tb category-list">
             <h5> 

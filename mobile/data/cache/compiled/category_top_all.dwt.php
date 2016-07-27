@@ -1,5 +1,5 @@
 <?php echo $this->fetch('library/page_header.lbi'); ?><?php echo $this->fetch('library/page_top.lbi'); ?><?php echo $this->fetch('library/page_search1.lbi'); ?><div class="container ect-dp-container">
-  <div class="panel-group" id="accordion"> 
+  <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true"> 
     <?php $_from = $this->_var['category']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }; $this->push_vars('', 'cat');$this->_foreach['no'] = array('total' => count($_from), 'iteration' => 0);
 if ($this->_foreach['no']['total'] > 0):
     foreach ($_from AS $this->_var['cat']):
@@ -7,10 +7,10 @@ if ($this->_foreach['no']['total'] > 0):
 ?>
     <div class="panel panel-default"> 
       <?php if ($this->_var['cat']['cat_id']): ?>
-      <div class="panel-heading">
-        <h4 class="panel-title" data-toggle="collapse" data-parent="#accordion" href="#collapse<?php echo $this->_var['cat']['id']; ?>" aria-expanded="false" aria-controls="collapse<?php echo $this->_var['cat']['id']; ?>"> <?php echo htmlspecialchars($this->_var['cat']['name']); ?><i class="pull-right fa fa-angle-right"></i> </h4>
+      <div class="panel-heading" role="tab" id="heading<?php echo $this->_var['cat']['id']; ?>">
+        <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse<?php echo $this->_var['cat']['id']; ?>" aria-expanded="false" aria-controls="collapse<?php echo $this->_var['cat']['id']; ?>" style="display:block;color: rgb(128, 128, 128) !important;"><?php echo htmlspecialchars($this->_var['cat']['name']); ?> <i class="pull-right fa fa-angle-right"></i></a></h4>
       </div>
-      <div id="collapse<?php echo $this->_var['cat']['id']; ?>" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+      <div id="collapse<?php echo $this->_var['cat']['id']; ?>" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading<?php echo $this->_var['cat']['id']; ?>">
         <div class="panel-body"> 
           <?php $_from = $this->_var['cat']['cat_id']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }; $this->push_vars('', 'child');$this->_foreach['no1'] = array('total' => count($_from), 'iteration' => 0);
 if ($this->_foreach['no1']['total'] > 0):
