@@ -1,4 +1,4 @@
-<?php exit;?>a:3:{s:8:"template";a:6:{i:0;s:63:"D:\phpStudy\WWW\dapu\mobile/themes/default/category_top_all.dwt";i:1;s:66:"D:\phpStudy\WWW\dapu\mobile/themes/default/library/page_header.lbi";i:2;s:63:"D:\phpStudy\WWW\dapu\mobile/themes/default/library/page_top.lbi";i:3;s:67:"D:\phpStudy\WWW\dapu\mobile/themes/default/library/page_search1.lbi";i:4;s:64:"D:\phpStudy\WWW\dapu\mobile/themes/default/library/page_menu.lbi";i:5;s:66:"D:\phpStudy\WWW\dapu\mobile/themes/default/library/page_footer.lbi";}s:7:"expires";i:1469602061;s:8:"maketime";i:1469598461;}<!DOCTYPE html>
+<?php exit;?>a:3:{s:8:"template";a:6:{i:0;s:63:"D:\phpStudy\WWW\dapu\mobile/themes/default/category_top_all.dwt";i:1;s:66:"D:\phpStudy\WWW\dapu\mobile/themes/default/library/page_header.lbi";i:2;s:63:"D:\phpStudy\WWW\dapu\mobile/themes/default/library/page_top.lbi";i:3;s:67:"D:\phpStudy\WWW\dapu\mobile/themes/default/library/page_search1.lbi";i:4;s:64:"D:\phpStudy\WWW\dapu\mobile/themes/default/library/page_menu.lbi";i:5;s:66:"D:\phpStudy\WWW\dapu\mobile/themes/default/library/page_footer.lbi";}s:7:"expires";i:1469694537;s:8:"maketime";i:1469690937;}<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
 <meta charset="utf-8">
@@ -34,108 +34,6 @@
     </div>
     </div><div class="container ect-dp-container">
   <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true"> 
-        <div class="panel panel-default"> 
-            <div class="panel-heading" role="tab" id="heading1">
-        <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="false" aria-controls="collapse1" style="display:block;color: rgb(128, 128, 128) !important;">手机类型 <i class="pull-right fa fa-angle-right"></i></a></h4>
-      </div>
-      <div id="collapse1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading1">
-        <div class="panel-body"> 
-                    <div class="ect-margin-tb category-list">
-            <h5> 
-               
-              <a href="/dapu/mobile/index.php?m=default&c=category&a=index&id=2" style="color:#808080 !important;">CDMA手机</a> 
-               
-            </h5>
-            <div> 
-               
-            </div>
-          </div>
-                    <div class="ect-margin-tb category-list">
-            <h5> 
-               
-              <a href="/dapu/mobile/index.php?m=default&c=category&a=index&id=3" style="color:#808080 !important;">GSM手机</a> 
-               
-            </h5>
-            <div> 
-               
-            </div>
-          </div>
-                    <div class="ect-margin-tb category-list">
-            <h5> 
-               
-              <a href="/dapu/mobile/index.php?m=default&c=category&a=index&id=4" style="color:#808080 !important;">3G手机</a> 
-               
-            </h5>
-            <div> 
-               
-            </div>
-          </div>
-                    <div class="ect-margin-tb category-list">
-            <h5> 
-               
-              <a href="/dapu/mobile/index.php?m=default&c=category&a=index&id=5" style="color:#808080 !important;">双模手机</a> 
-               
-            </h5>
-            <div> 
-               
-            </div>
-          </div>
-           
-        </div>
-      </div>
-       
-    </div>
-        <div class="panel panel-default"> 
-            <div class="panel-heading" role="tab" id="heading6">
-        <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse6" aria-expanded="false" aria-controls="collapse6" style="display:block;color: rgb(128, 128, 128) !important;">手机配件 <i class="pull-right fa fa-angle-right"></i></a></h4>
-      </div>
-      <div id="collapse6" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading6">
-        <div class="panel-body"> 
-                    <div class="ect-margin-tb category-list">
-            <h5> 
-               
-              <a href="/dapu/mobile/index.php?m=default&c=category&a=index&id=7" style="color:#808080 !important;">充电器</a> 
-               
-            </h5>
-            <div> 
-               
-            </div>
-          </div>
-                    <div class="ect-margin-tb category-list">
-            <h5> 
-               
-              <a href="/dapu/mobile/index.php?m=default&c=category&a=index&id=8" style="color:#808080 !important;">耳机</a> 
-               
-            </h5>
-            <div> 
-               
-            </div>
-          </div>
-                    <div class="ect-margin-tb category-list">
-            <h5> 
-               
-              <a href="/dapu/mobile/index.php?m=default&c=category&a=index&id=9" style="color:#808080 !important;">电池</a> 
-               
-            </h5>
-            <div> 
-               
-            </div>
-          </div>
-                    <div class="ect-margin-tb category-list">
-            <h5> 
-               
-              <a href="/dapu/mobile/index.php?m=default&c=category&a=index&id=11" style="color:#808080 !important;">读卡器和内存卡</a> 
-               
-            </h5>
-            <div> 
-               
-            </div>
-          </div>
-           
-        </div>
-      </div>
-       
-    </div>
         <div class="panel panel-default"> 
             <div class="panel-heading" role="tab" id="heading12">
         <h4 class="panel-title"><a data-toggle="collapse" data-parent="#accordion" href="#collapse12" aria-expanded="false" aria-controls="collapse12" style="display:block;color: rgb(128, 128, 128) !important;">充值卡 <i class="pull-right fa fa-angle-right"></i></a></h4>
