@@ -57,7 +57,7 @@ require(ROOT_PATH . 'includes/cls_ecshop.php');
 require(ROOT_PATH . 'includes/cls_session.php');
 require(ROOT_PATH . 'includes/lib_common.php');
 
-/* 创建 ECSHOP 对象 */
+/* 锟斤拷锟斤拷 ECSHOP 锟斤拷锟斤拷 */
 $ecs = new ECS($db_name, $prefix);
 define('DATA_DIR', $ecs->data_dir());
 define('IMAGE_DIR', $ecs->image_dir());
@@ -91,7 +91,7 @@ else
     $enable = false;
 }
 
-/* 载入系统参数 */
+/* 锟斤拷锟斤拷系统锟斤拷锟斤拷 */
 $_CFG = load_config();
 
 $Config['Enabled'] = $enable;
